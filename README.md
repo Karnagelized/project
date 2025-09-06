@@ -9,3 +9,11 @@
 ---
 
 ### Ссылка на [Wiki](https://github.com/Karnagelized/project/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0)
+
+# Контрольный чеклист перед сдачей
+* :heavy_check_mark: Репозиторий project создан и публичен.
+* :heavy_check_mark: Wiki содержит страницу Home.
+* :heavy_check_mark: Wiki содержит страницу “Генерация идей” с 3 идеями.
+* :heavy_check_mark: Wiki содержит страницу “Оценка идей” с таблицей оценок от трёх экспертов и указанием шаблона оценки.
+* :heavy_check_mark: Есть чёткое обоснование выбранной идеи.
+* :heavy_check_mark: В README (или в Home Wiki) указана ссылка на Wiki и имена экспертов.
