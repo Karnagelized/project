@@ -9,8 +9,3 @@
 ---
 
 ### Ссылка на [Wiki](https://github.com/Karnagelized/project/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0)
-
-### Состав экспертной группы
-1. [Корягин Артем](???)
-2. [Филипков Павел](https://github.com/Dementro1)
-3. Автор репозитория - [Антонов Максим](https://github.com/Karnagelized)
