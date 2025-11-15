@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="StepByStep HLD" id="TODO">
+    <mxGraphModel dx="1426" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="user" value="Пользователь" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="116" y="240" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="Администратор" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="116" y="90" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" value="Frontend (React SPA)&lt;br&gt;- Редактор инструкций&lt;br&gt;- Просмотр мануалов&lt;br&gt;- Личный кабинет&lt;br&gt;Хостинг: S3 + CloudFront" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="266" y="60" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" value="Backend API (Node.js)&lt;br&gt;- REST API обработка&lt;br&gt;- Бизнес-логика&lt;br&gt;- Аутентификация" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="266" y="290" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="django" value="Django Service&lt;br&gt;- AI генерация&lt;br&gt;- Обработка Telegram" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="266" y="450" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="telegram_bot" value="Telegram Bot&lt;br&gt;- Обработка сообщений&lt;br&gt;- FAQ система" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="61" y="600" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ai_provider" value="AI Provider API&lt;br&gt;(OpenAI GPT-4V)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="590" y="460" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="telegram_api" value="Telegram API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+          <mxGeometry x="286" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="postgresql" value="PostgreSQL&lt;br&gt;- Пользователи&lt;br&gt;- Инструкции&lt;br&gt;- Шаги" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" parent="1" vertex="1">
+          <mxGeometry x="466" y="60" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="Redis&lt;br&gt;- Кэш&lt;br&gt;- Сессии&lt;br&gt;- Очереди" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" parent="1" vertex="1">
+          <mxGeometry x="600" y="300" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Amazon S3&lt;br&gt;- Медиафайлы&lt;br&gt;- Изображения&lt;br&gt;- Видео" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" parent="1" vertex="1">
+          <mxGeometry x="626" y="60" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" value="Запросы" style="endArrow=classic;html=1;rounded=0;" parent="1" source="user" target="frontend" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="446" y="210" as="sourcePoint" />
+            <mxPoint x="496" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn2" value="Управление" style="endArrow=classic;html=1;rounded=0;" parent="1" source="admin" target="frontend" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="446" y="310" as="sourcePoint" />
+            <mxPoint x="496" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn3" value="REST API" style="endArrow=classic;html=1;rounded=0;" parent="1" source="frontend" target="backend" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="426" y="210" as="sourcePoint" />
+            <mxPoint x="476" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn4" value="Сообщения" style="endArrow=classic;html=1;rounded=0;" parent="1" source="user" target="telegram_bot" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="136" y="220" as="sourcePoint" />
+            <mxPoint x="466" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn5" value="CRUD операции" style="endArrow=classic;html=1;rounded=0;" parent="1" source="backend" target="postgresql" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="426" y="360" as="sourcePoint" />
+            <mxPoint x="466" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn6" value="Кэш, сессии" style="endArrow=classic;html=1;rounded=0;" parent="1" source="backend" target="redis" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="426" y="360" as="sourcePoint" />
+            <mxPoint x="466" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn7" value="Метаданные медиа" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="backend" target="s3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="426.00304347826096" y="319.41" as="sourcePoint" />
+            <mxPoint x="632.09" y="179.99823529411768" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn8" value="AI запросы" style="endArrow=classic;html=1;rounded=0;" parent="1" source="backend" target="django" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="426" y="410" as="sourcePoint" />
+            <mxPoint x="266" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn9" value="Генерация текста" style="endArrow=classic;html=1;rounded=0;" parent="1" source="django" target="ai_provider" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="426" y="490" as="sourcePoint" />
+            <mxPoint x="466" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn10" value="Запросы пользователей" style="endArrow=classic;html=1;rounded=0;" parent="1" source="telegram_bot" target="django" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="466" y="490" as="sourcePoint" />
+            <mxPoint x="426" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn11" value="API вызовы" style="endArrow=classic;html=1;rounded=0;" parent="1" source="telegram_bot" target="telegram_api" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="606" y="490" as="sourcePoint" />
+            <mxPoint x="646" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn12" value="Загрузка медиа" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" source="frontend" target="s3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="426" y="210" as="sourcePoint" />
+            <mxPoint x="626" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
